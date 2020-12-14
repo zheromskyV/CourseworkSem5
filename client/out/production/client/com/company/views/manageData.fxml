@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="900.0" prefWidth="1200.0" style="-fx-background-color: f6f4e6;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.company.controllers.ManageDataController">
+   <children>
+      <AnchorPane prefHeight="150.0" prefWidth="1200.0" style="-fx-background-color: fddb3a;">
+         <children>
+            <Text fill="#41444b" layoutX="362.0" layoutY="96.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Работа с данными">
+               <font>
+                  <Font name="Arial" size="60.0" />
+               </font>
+            </Text>
+         </children>
+      </AnchorPane>
+      <Button fx:id="backBtn" focusTraversable="false" layoutX="20.0" layoutY="170.0" minHeight="40.0" mnemonicParsing="false" onAction="#onBack" prefWidth="120.0" text="&lt; Назад">
+         <font>
+            <Font name="Arial" size="20.0" />
+         </font>
+      </Button>
+      <TabPane layoutX="160.0" layoutY="178.0" prefHeight="650.0" prefWidth="1000.0" tabClosingPolicy="UNAVAILABLE">
+        <tabs>
+          <Tab text="Просмотр">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <TableView fx:id="table" focusTraversable="false" layoutX="10.0" layoutY="10.0" prefHeight="540.0" prefWidth="980.0" tableMenuButtonVisible="true">
+                          <columns>
+                            <TableColumn fx:id="cIdNum" editable="false" maxWidth="100.0" minWidth="50.0" prefWidth="50.0" text="№" />
+                              <TableColumn fx:id="cIdName" editable="false" maxWidth="300.0" minWidth="50.0" prefWidth="150.0" text="Имя" />
+                              <TableColumn fx:id="cIdSurname" editable="false" maxWidth="300.0" minWidth="50.0" prefWidth="150.0" text="Фамилия" />
+                              <TableColumn fx:id="cIdPassport" editable="false" maxWidth="150.0" minWidth="50.0" prefWidth="120.0" text="Паспорт" />
+                              <TableColumn fx:id="cIdDepartment" editable="false" maxWidth="150.0" minWidth="50.0" prefWidth="150.0" text="Отдел" />
+                              <TableColumn fx:id="cIdBank" editable="false" maxWidth="150.0" minWidth="50.0" prefWidth="150.0" text="Банк" />
+                              <TableColumn fx:id="cIdAccred" editable="false" maxWidth="100.0" minWidth="50.0" prefWidth="100.0" text="Аккред." />
+                              <TableColumn fx:id="cIdSatisf" editable="false" maxWidth="100.0" minWidth="50.0" prefWidth="100.0" text="Удовл." />
+                          </columns>
+                           <opaqueInsets>
+                              <Insets />
+                           </opaqueInsets>
+                        </TableView>
+                        <Button fx:id="updateBtn" focusTraversable="false" layoutX="870.0" layoutY="570.0" minHeight="40.0" mnemonicParsing="false" onAction="#onUpdate" prefWidth="120.0" text="Обновить">
+                           <font>
+                              <Font name="Arial" size="20.0" />
+                           </font>
+                        </Button>
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+            <Tab text="Редактирование">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <Button fx:id="btnSave" focusTraversable="false" layoutX="150.0" layoutY="500.0" mnemonicParsing="false" onAction="#onSave" prefHeight="60.0" prefWidth="600.0" text="Сохранить">
+                           <font>
+                              <Font name="Arial" size="30.0" />
+                           </font>
+                        </Button>
+                        <TextField fx:id="saveName" focusTraversable="false" layoutX="150.0" layoutY="140.0" prefHeight="60.0" prefWidth="600.0" promptText="Имя">
+                           <font>
+                              <Font name="Arial" size="30.0" />
+                           </font>
+                        </TextField>
+                        <TextField fx:id="saveNum" focusTraversable="false" layoutX="150.0" layoutY="50.0" prefHeight="60.0" prefWidth="290.0" promptText="№">
+                           <font>
+                              <Font name="Arial" size="30.0" />
+                           </font>
+                        </TextField>
+                        <Button fx:id="btnLoad" focusTraversable="false" layoutX="460.0" layoutY="50.0" mnemonicParsing="false" onAction="#onLoad" prefHeight="60.0" prefWidth="290.0" text="Загрузить">
+                           <font>
+                              <Font name="Arial" size="30.0" />
+                           </font>
+                        </Button>
+                        <TextField fx:id="savePassportNum" focusTraversable="false" layoutX="150.0" layoutY="410.0" prefHeight="60.0" prefWidth="600.0" promptText="Номер паспорта">
+                           <font>
+                              <Font name="Arial" size="30.0" />
+                           </font>
+                        </TextField>
+                        <TextField fx:id="savePassportSer" focusTraversable="false" layoutX="150.0" layoutY="320.0" prefHeight="60.0" prefWidth="600.0" promptText="Серия паспорта">
+                           <font>
+                              <Font name="Arial" size="30.0" />
+                           </font>
+                        </TextField>
+                        <TextField fx:id="saveSurname" focusTraversable="false" layoutX="150.0" layoutY="230.0" prefHeight="60.0" prefWidth="600.0" promptText="Фамилия">
+                           <font>
+                              <Font name="Arial" size="30.0" />
+                           </font>
+                        </TextField>
+                     </children>
+                  </AnchorPane>
+               </content>
+            </Tab>
+        </tabs>
+      </TabPane>
+   </children>
+</AnchorPane>

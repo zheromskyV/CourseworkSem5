@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="900.0" prefWidth="1200.0" style="-fx-background-color: f6f4e6;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.company.controllers.AdminMenuController">
+   <children>
+      <AnchorPane prefHeight="150.0" prefWidth="1200.0" style="-fx-background-color: fddb3a;">
+         <children>
+            <Text fill="#41444b" layoutX="279.0" layoutY="97.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Меню администратора">
+               <font>
+                  <Font name="Arial" size="60.0" />
+               </font>
+            </Text>
+         </children>
+      </AnchorPane>
+      <Button fx:id="backBtn" focusTraversable="false" layoutX="20.0" layoutY="170.0" minHeight="40.0" mnemonicParsing="false" onAction="#onBack" prefWidth="120.0" text="&lt; Назад">
+         <font>
+            <Font name="Arial" size="20.0" />
+         </font>
+      </Button>
+      <Button fx:id="dataBtn" focusTraversable="false" layoutX="300.0" layoutY="230.0" mnemonicParsing="false" onAction="#onData" prefHeight="60.0" prefWidth="600.0" text="Работа с данными">
+         <font>
+            <Font name="Arial" size="30.0" />
+         </font>
+      </Button>
+      <Button fx:id="salaryBtn" focusTraversable="false" layoutX="300.0" layoutY="320.0" mnemonicParsing="false" onAction="#onSalary" prefHeight="60.0" prefWidth="600.0" text="Заработные платы">
+         <font>
+            <Font name="Arial" size="30.0" />
+         </font>
+      </Button>
+      <Button fx:id="manageUsersBtn" focusTraversable="false" layoutX="300.0" layoutY="410.0" mnemonicParsing="false" onAction="#onManageUsers" prefHeight="60.0" prefWidth="600.0" text="Управление пользователями">
+         <font>
+            <Font name="Arial" size="30.0" />
+         </font>
+      </Button>
+      <Button fx:id="diagrBtn" focusTraversable="false" layoutX="300.0" layoutY="530.0" mnemonicParsing="false" onAction="#onDiagr" prefHeight="60.0" prefWidth="600.0" text="Построить диаграммы">
+         <font>
+            <Font name="Arial" size="30.0" />
+         </font>
+      </Button>
+      <Button fx:id="reportBtn" focusTraversable="false" layoutX="300.0" layoutY="710.0" mnemonicParsing="false" onAction="#onReport" prefHeight="60.0" prefWidth="600.0" text="Создать отчеты">
+         <font>
+            <Font name="Arial" size="30.0" />
+         </font>
+      </Button>
+      <Button fx:id="chartBtn" focusTraversable="false" layoutX="300.0" layoutY="620.0" mnemonicParsing="false" onAction="#onChart" prefHeight="60.0" prefWidth="600.0" text="Построить графики">
+         <font>
+            <Font name="Arial" size="30.0" />
+         </font>
+      </Button>
+      <Line endX="150.0" layoutX="600.0" layoutY="500.0" startX="-150.0" stroke="#52575d" />
+   </children>
+</AnchorPane>

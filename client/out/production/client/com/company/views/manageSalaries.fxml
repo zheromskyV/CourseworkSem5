@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="900.0" prefWidth="1200.0" style="-fx-background-color: f6f4e6;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.company.controllers.ManageSalariesController">
+   <children>
+      <AnchorPane prefHeight="150.0" prefWidth="1200.0" style="-fx-background-color: fddb3a;">
+         <children>
+            <Text fill="#41444b" layoutX="350.0" layoutY="94.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Заработные платы">
+               <font>
+                  <Font name="Arial" size="60.0" />
+               </font>
+            </Text>
+         </children>
+      </AnchorPane>
+      <Button fx:id="backBtn" focusTraversable="false" layoutX="20.0" layoutY="170.0" minHeight="40.0" mnemonicParsing="false" onAction="#onBack" prefWidth="120.0" text="&lt; Назад">
+         <font>
+            <Font name="Arial" size="20.0" />
+         </font>
+      </Button>
+      <TabPane layoutX="160.0" layoutY="178.0" prefHeight="650.0" prefWidth="1000.0" tabClosingPolicy="UNAVAILABLE">
+        <tabs>
+          <Tab text="З/П">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <TableView fx:id="tableF" focusTraversable="false" layoutX="10.0" layoutY="10.0" prefHeight="540.0" prefWidth="980.0" tableMenuButtonVisible="true">
+                          <columns>
+                            <TableColumn fx:id="cIdNumF" editable="false" maxWidth="100.0" minWidth="50.0" prefWidth="50.0" text="№" />
+                              <TableColumn fx:id="cIdSurnameF" editable="false" maxWidth="300.0" minWidth="50.0" prefWidth="200.0" text="Фамилия" />
+                              <TableColumn fx:id="cIdDepartmentF" editable="false" maxWidth="300.0" minWidth="50.0" prefWidth="200.0" text="Отдел" />
+                              <TableColumn fx:id="cIdSalaryF" editable="false" maxWidth="300.0" minWidth="50.0" prefWidth="200.0" text="Ставка" />
+                              <TableColumn fx:id="cIdAccredF" editable="false" maxWidth="100.0" minWidth="50.0" prefWidth="100.0" text="Аккред." />
+                              <TableColumn fx:id="cIdSatisfF" editable="false" maxWidth="100.0" minWidth="50.0" prefWidth="100.0" text="Удовл." />
+                              <TableColumn fx:id="cIdKoefF" editable="false" maxWidth="100.0" minWidth="50.0" prefWidth="100.0" text="Коэф." />
+                          </columns>
+                           <opaqueInsets>
+                              <Insets />
+                           </opaqueInsets>
+                        </TableView>
+                        <Button fx:id="updateBtnF" focusTraversable="false" layoutX="856.0" layoutY="568.0" minHeight="40.0" mnemonicParsing="false" onAction="#onUpdate" prefHeight="40.0" prefWidth="133.0" text=" Обновить">
+                           <font>
+                              <Font name="Arial" size="20.0" />
+                           </font>
+                        </Button>
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+            <Tab text="В расчете">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <TableView fx:id="tableS" focusTraversable="false" prefHeight="540.0" prefWidth="980.0" tableMenuButtonVisible="true">
+                           <columns>
+                              <TableColumn fx:id="cIdNumS" editable="false" maxWidth="100.0" minWidth="50.0" prefWidth="50.0" text="№" />
+                              <TableColumn fx:id="cIdSurnameS" editable="false" maxWidth="300.0" minWidth="50.0" prefWidth="150.0" text="Фамилия" />
+                              <TableColumn fx:id="cIdDepartmentS" editable="false" maxWidth="300.0" minWidth="50.0" prefWidth="150.0" text="Отдел" />
+                              <TableColumn fx:id="cIdSalaryS" editable="false" maxWidth="300.0" minWidth="50.0" prefWidth="150.0" text="Ставка" />
+                              <TableColumn fx:id="cIdKoefS" editable="false" maxWidth="100.0" minWidth="50.0" prefWidth="100.0" text="Коэф." />
+                              <TableColumn fx:id="cIdHoursS" editable="false" maxWidth="100.0" minWidth="50.0" prefWidth="100.0" text="Часы" />
+                              <TableColumn fx:id="cIdMonthSalaryS" editable="false" maxWidth="300.0" minWidth="50.0" prefWidth="200.0" text="З/П" />
+                           </columns>
+                           <opaqueInsets>
+                              <Insets />
+                           </opaqueInsets>
+                        </TableView>
+                        <Button fx:id="updateBtnS" focusTraversable="false" layoutX="847.0" layoutY="559.0" minHeight="40.0" mnemonicParsing="false" onAction="#onUpdate" prefHeight="40.0" prefWidth="133.0" text=" Обновить">
+                           <font>
+                              <Font name="Arial" size="20.0" />
+                           </font>
+                        </Button>
+                     </children>
+                  </AnchorPane>
+               </content>
+            </Tab>
+            <Tab text="Изменить">
+                <content>
+                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                        <children>
+                            <Button fx:id="btnSave" focusTraversable="false" layoutX="150.0" layoutY="230.0" mnemonicParsing="false" onAction="#onSave" prefHeight="60.0" prefWidth="600.0" text="Сохранить">
+                                <font>
+                                    <Font name="Arial" size="30.0" />
+                                </font>
+                            </Button>
+                            <TextField fx:id="saveSalary" focusTraversable="false" layoutX="150.0" layoutY="140.0" prefHeight="60.0" prefWidth="600.0" promptText="Ставка">
+                                <font>
+                                    <Font name="Arial" size="30.0" />
+                                </font>
+                            </TextField>
+                            <TextField fx:id="saveNum" focusTraversable="false" layoutX="150.0" layoutY="50.0" prefHeight="60.0" prefWidth="290.0" promptText="№">
+                                <font>
+                                    <Font name="Arial" size="30.0" />
+                                </font>
+                            </TextField>
+                            <Button fx:id="btnLoad" focusTraversable="false" layoutX="460.0" layoutY="50.0" mnemonicParsing="false" onAction="#onLoad" prefHeight="60.0" prefWidth="290.0" text="Загрузить">
+                                <font>
+                                    <Font name="Arial" size="30.0" />
+                                </font>
+                            </Button>
+                        </children>
+                    </AnchorPane>
+                </content>
+            </Tab>
+        </tabs>
+      </TabPane>
+   </children>
+</AnchorPane>
